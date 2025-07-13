@@ -15,12 +15,14 @@ import InvoiceList from './pages/InvoiceList';
 import CustomerDetail from './pages/CustomerDetail';
 import InvoicePrint from './pages/InvoicePrint';
 import EditStore from './pages/EditStore';
+import Footer from './components/Footer'; // ✅ Import footer
 
 function App() {
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
+
         <div className="flex-grow-1 container mt-4">
           <Routes>
             <Route path="/register" element={<Register />} />
@@ -37,6 +39,8 @@ function App() {
             <Route path="/store/edit" element={<EditStore />} />
           </Routes>
         </div>
+
+        <Footer /> {/* ✅ Footer always at the bottom */}
       </div>
     </Router>
   );
